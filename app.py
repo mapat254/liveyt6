@@ -207,7 +207,7 @@ def handle_oauth_callback():
                 'client_secret': st.session_state.client_secret,
                 'code': auth_code,
                 'grant_type': 'authorization_code',
-                'redirect_uri': 'https://liveyt4.streamlit.app'  # Your actual Streamlit app URL
+                'redirect_uri': 'https://liveyt6.streamlit.app'  # Your actual Streamlit app URL
             }
             
             response = requests.post(token_url, data=data)
@@ -251,7 +251,7 @@ def authenticate_youtube_manual():
     try:
         # Create OAuth URL manually
         client_id = st.session_state.client_id
-        redirect_uri = "https://liveyt4.streamlit.app"  # Your actual Streamlit app URL
+        redirect_uri = "https://liveyt6.streamlit.app"  # Your actual Streamlit app URL
         scope = "https://www.googleapis.com/auth/youtube.force-ssl"
         
         auth_url = (
@@ -1199,7 +1199,7 @@ def main():
                 3. **Enable "YouTube Data API v3"**
                 4. **Create OAuth 2.0 Client ID:**
                    - Application type: **Web application**
-                   - Authorized redirect URIs: `https://liveyt4.streamlit.app`
+                   - Authorized redirect URIs: `https://liveyt6.streamlit.app`
                 5. **Copy Client ID and Client Secret**
                 """)
                 
